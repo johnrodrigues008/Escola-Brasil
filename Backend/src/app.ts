@@ -1,3 +1,5 @@
+import 'dotenv/config';
+import './database/dataSource';
 import express from "express";
 import cors from "cors";
 import { router } from "./router/alunoRouter";

@@ -1,6 +1,11 @@
 import { Sequelize } from "sequelize";
+import { SalaModel } from "../models/salasModel";
+import { AlunoModel } from "../models/alunosModel";
 
 export class Models {
+
+      public salas: typeof SalaModel = SalaModel;
+      public alunos: typeof AlunoModel = AlunoModel;
 
       // mapear os modelos
       constructor(db: Sequelize) {

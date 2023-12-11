@@ -13,7 +13,7 @@ class dataSource {
                   password: process.env.DB_PASSWORD,
                   port: Number(process.env.DB_PORT),
                   host: process.env.DB_HOST,
-                  dialect: process.env.DB as Dialect,
+                  dialect: 'postgres' as Dialect,
                   define: { freezeTableName: true },
                   sync: { force: false },
             };
