@@ -2,6 +2,7 @@ import { Router } from "express";
 import { criarAluno } from "../controllers/AlunoController";
 import { AlunoModel } from "../models/alunosModel";
 import { v4 } from "uuid";
+import { AlunoMiddleware } from "../middlewares/alunosMiddleware";
 
 const router = Router();
 
@@ -19,16 +20,6 @@ router.get('/alunos', async (req, res) =>{
       return res.send('Rota de alunos ativa!');
 });
 
-router.post("/aluno", criarAluno);
-
-
-
-
-
-
-
-
-
-
+router.post("/aluno", AlunoMiddleware, criarAluno);
 
 export { router };
